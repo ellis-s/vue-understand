@@ -18,11 +18,11 @@
   function isUndef (v) {
     return v === undefined || v === null
   }
-
+  // 判断是已定义过的变量
   function isDef (v) {
     return v !== undefined && v !== null
   }
-
+  
   function isTrue (v) {
     return v === true
   }
@@ -33,6 +33,7 @@
 
   /**
    * Check if value is primitive.
+   * 检查输入值是否为原始值。
    */
   function isPrimitive (value) {
     return (
@@ -54,7 +55,7 @@
   }
 
   /**
-   * Get the raw type string of a value, e.g., [object Object].
+   * Get the raw(原始) type string of a value, e.g., [object Object].
    */
   var _toString = Object.prototype.toString;
 
@@ -102,7 +103,7 @@
   }
 
   /**
-   * Convert an input value to a number for persistence.
+   * Convert(转换) an input value to a number for persistence(持久性).
    * If the conversion fails, return original string.
    */
   function toNumber (val) {
@@ -113,6 +114,7 @@
   /**
    * Make a map and return a function for checking if a key
    * is in that map.
+   * 创建一个字典映射，快速在一串由”,“拼接的字符串中找到目标字符串。返回一个布尔值。此方法用到了闭包。
    */
   function makeMap (
     str,
