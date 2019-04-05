@@ -131,17 +131,18 @@
   }
 
   /**
-   * Check if a tag is a built-in tag.
+   * Check if a tag is a built-in（内置的） tag.
    */
   var isBuiltInTag = makeMap('slot,component', true);
 
   /**
-   * Check if an attribute is a reserved attribute.
+   * Check if an attribute is a reserved(保留的，预定的) attribute.
    */
   var isReservedAttribute = makeMap('key,ref,slot,slot-scope,is');
 
   /**
    * Remove an item from an array.
+   * 从一个数组中移除一个元素
    */
   function remove (arr, item) {
     if (arr.length) {
@@ -154,6 +155,7 @@
 
   /**
    * Check whether an object has the property.
+   * 检查一个对象是否有这个属性
    */
   var hasOwnProperty = Object.prototype.hasOwnProperty;
   function hasOwn (obj, key) {
@@ -161,7 +163,7 @@
   }
 
   /**
-   * Create a cached version of a pure function.
+   * Create a cached version of a pure(纯的，纯碎的) function.
    */
   function cached (fn) {
     var cache = Object.create(null);
